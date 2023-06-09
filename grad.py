@@ -26,4 +26,4 @@ for i in range(1000):
 print("point of optima: ",x,y)
 print("value of partial derivative res to x: ",partial_dev_res_x(x,y))
 print("value of partial derivative res to y: ",partial_dev_res_y(x,y))
-print("functional value: ",target(x,y))
+print("optimal functional value: ",target(x,y))
