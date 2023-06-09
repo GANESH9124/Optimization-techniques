@@ -6,7 +6,7 @@ import numpy as np
 def target(x,y):
     return x - y +(2*(x**2))+(2*x*y)+(y**2)
 
-# function for partial derivatives
+# function for partial derivatives of target function 
 def partial_dev_res_x(x,y):
     return 1+(4*x)+(2*y)
 def partial_dev_res_y(x,y):
@@ -23,5 +23,7 @@ for i in range(1000):
     y = y - learning_rate*(partial_dev_res_y(x,y))
     
 
-print(x,y)
-print(partial_dev_res_x(x,y),partial_dev_res_y(x,y))
+print("point of optima: ",x,y)
+print("value of partial derivative res to x: ",partial_dev_res_x(x,y))
+print("value of partial derivative res to y: ",partial_dev_res_y(x,y))
+print("functional value: ",target(x,y))
